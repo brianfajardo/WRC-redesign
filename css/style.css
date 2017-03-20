@@ -1,0 +1,246 @@
+html, 
+body {
+    height: 100%;
+    font-size: 16px;
+    font-family: 'BebasNeue Bold', sans-serif;
+    background: url('../images/naturalwhite.png') center center;
+}
+
+/* Fonts */
+@font-face {
+    font-family: 'BebasNeue Bold';
+    src: local('fonts/BebasNeue Bold.ttf'), url('fonts/BebasNeue Bold.ttf') format('truetype');
+}
+
+/* Section: cover */
+
+#cover {
+    height: 100%;
+    background: url('../images/cover.jpg') center center;
+    background-size: cover;
+}
+
+.wall-sticker {
+    padding: 10rem 21rem 16rem 1rem;
+    font-size: 70px;
+    background: rgba(0,0,0,0.9);
+    line-height: 90px;
+    color: white;
+}
+
+.wall-sticker-text {
+    background: red;
+}
+
+.wall-sticker-text:hover {
+    text-decoration: underline
+}
+
+/* chevron animation */
+
+.container-chevron {
+  width: 24px;
+  height: 24px;
+  margin-top: -250px;
+  margin-left: 20px;
+}
+
+.chevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #fff;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+.text {
+  display: block;
+  margin-top: 75px;
+  margin-left: -30px;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: .25;
+  animation: pulse 2s linear alternate infinite;
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
+
+/* chevron animation end */
+
+/* Buttons */
+.btn-default {
+    background-color: white;
+    color: black;
+    border-radius: 0px;
+    transition: 0.5s;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active {
+    border: none;
+    transition: 0s;
+}
+
+.fa-angle-double-down {
+    font-size: 50px;
+    transition: 0.5s;
+}
+
+.fa-angle-double-down:hover{
+    transition: 0.25s;
+    color: red;
+}
+
+
+/* Navbar */
+.navbar {
+    border-radius: 0px;
+    box-sizing: border-box
+}
+
+.navbar-brand {
+    padding-right: 10px;
+    color: white !important;
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#main-nav li a {
+    border-bottom: 1px solid transparent;
+}
+
+#main-nav li a:hover {
+    border-bottom: 2px solid dodgerblue;
+    border-top: 2px solid red;
+    color: white;
+}
+
+/* About features */
+.section-features {
+    padding: 5rem 0;
+}
+
+.heading,
+.under-heading {
+    text-align: center;
+}
+
+.under-heading{
+    margin-bottom: 80px;
+}
+
+.square {
+    text-align: center
+}
+
+.square p {
+    color: white;
+}
+
+.square i {
+    text-align: center;
+    margin-top: 5rem;
+    transition: 0.75s;
+}
+
+.square i:hover {
+    color: black;
+    transition: 0.25s
+}
+
+.feature-text {
+    font-size: 20px;
+    background-color: rgba(0,0,0,0.95);
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+.feature-text:hover {
+    background-color: red;
+}
+
+/* Forms */
+
+.form-control {
+    border-radius: 0px;
+}
+
+.navbar-form {
+    margin-right: 0px;
+}
+
+/* History section */
+
+#timeline {
+    background: white;
+}
+
+/* helper classes */
+
+.hl-red {
+    color: red;
+}
+
+.hr-red {
+    border-top: 1px solid red;
+    width: 200px
+}
+
