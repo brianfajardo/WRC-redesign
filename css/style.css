@@ -275,14 +275,14 @@ body {
     float: left;
     border: 1px solid #d4d4d4;
     border-radius: 2px;
-    padding: 20px;
+    /*padding: 20px;*/
     position: relative;
     box-shadow: 0 1px 6px rgba(0,0,0,0.175);
 }
 
 .timeline p {
     font-family: 'Roboto', sans-serif;
-    font-weight: 700;
+    /*font-weight: 600;*/
 }
 
 /* select li that are not... */
@@ -312,10 +312,6 @@ body {
     box-shadow: 2px 2px rgba(0,0,0,0.175);
 }
 
-.timeline-title {
-    font-size: 1.5rem
-}
-
 .timeline > li.timeline-inverted > .timeline-panel {
     float: right;
 }
@@ -323,33 +319,127 @@ body {
 .timeline-heading {
     width: 65%;
     float: left;
-    padding: 15px
+    margin-top: 30px;
+    padding-left: 20px;
+    font-size: 20px;
 }
 
 .driver-img {
-    background: url("../images/people/12.jpg") center no-repeat;
-    background-size: contain;
     float: right;
-    width:130px;
-    height:130px;
-    transition: 0.5s;
-    border-radius: 5px;
+    width:160px;
+    height:160px;
+    transition: 0.7s;
+    margin-right: 20px;
 }
 
-.driver-img:hover,
-.timeline-badge:hover {
+.driver-text {
+    clear: both;
+    padding: 15px;
+}
+
+.timeline li:first-child .driver-img {
+    background: url("../images/people/rburns.jpg") center no-repeat;
+    background-size: contain;
+}
+
+.timeline li:first-child .driver-img:hover {
     background: url("../images/subie.jpg") center no-repeat;
     background-size: contain;
     transition: 0.25s;
-    
+}
+
+.timeline li:nth-child(2) .driver-img {
+    background: url("../images/people/mgrohn.jpg") center no-repeat;
+    background-size: contain;
+}
+
+.timeline li:nth-child(2) .driver-img:hover {
+    background: url("../images/pug.jpg") center no-repeat;
+    background-size: contain;
+    transition: 0.25s;
+}
+
+.timeline li:nth-child(3) .driver-img {
+    background: url("../images/people/peter.jpg") center no-repeat;
+    background-size: contain;
+}
+
+.timeline li:nth-child(3) .driver-img:hover {
+    background: url("../images/subie2.jpg") center no-repeat;
+    background-size: contain;
+    transition: 0.25s;
+}
+
+.timeline li:nth-child(4) .driver-img {
+    background: url("../images/people/seba.jpg") center no-repeat;
+    background-size: contain;
+}
+
+.timeline li:nth-child(4) .driver-img:hover {
+    background: url("../images/ds3.jpg") center no-repeat;
+    background-size: contain;
+    transition: 0.25s;
+}
+
+.timeline li:last-child .driver-img {
+    background: url("../images/people/seba2.jpg") center no-repeat;
+    background-size: contain;
+}
+
+.timeline li:last-child .driver-img:hover {
+    background: url("../images/vwag.jpg") center no-repeat;
+    background-size: contain;
+    transition: 0.25s;
 }
 
 /* Parallax section */
 .parallax-image {
     background: url("../images/parallax.jpg") center fixed;
-    padding: 150px;
+    padding: 175px;
     background-size: cover
 }
+
+/* section events */
+h2 {
+    text-align: center;
+}
+
+#section-events {
+    padding-top: 6rem;
+}
+
+#section-events h2 {
+    color: white;
+    background: black;
+}
+
+#section-events h3 {
+    text-align: center;
+}
+
+.events-whole {
+    padding: 40px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+}
+
+table tr{
+    width: 50%;
+    padding: 5px;
+}
+
+table tr td:first-child {
+    font-size: 20px;
+}
+
+table tr td:last-child {
+    text-align: center;
+        font-family: 'Roboto', sans-serif;
+}
+
 
 /* helper classes */
 
