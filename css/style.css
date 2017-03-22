@@ -50,15 +50,19 @@ body {
   width: 28px;
   height: 8px;
   opacity: 0;
+  -webkit-transform: scale3d(0.5, 0.5, 0.5);
   transform: scale3d(0.5, 0.5, 0.5);
+  -webkit-animation: move 3s ease-out infinite;
   animation: move 3s ease-out infinite;
 }
 
 .chevron:first-child {
+  -webkit-animation: move 3s ease-out 1s infinite;
   animation: move 3s ease-out 1s infinite;
 }
 
 .chevron:nth-child(2) {
+  -webkit-animation: move 3s ease-out 2s infinite;
   animation: move 3s ease-out 2s infinite;
 }
 
@@ -74,13 +78,37 @@ body {
 
 .chevron:before {
   left: 0;
+  -webkit-transform: skew(0deg, 30deg);
   transform: skew(0deg, 30deg);
 }
 
 .chevron:after {
   right: 0;
   width: 50%;
+  -webkit-transform: skew(0deg, -30deg);
   transform: skew(0deg, -30deg);
+}
+
+@-webkit-keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
 }
 
 @keyframes move {
@@ -90,14 +118,17 @@ body {
   }
   33% {
     opacity: 1;
+    -webkit-transform: translateY(30px);
     transform: translateY(30px);
   }
   67% {
     opacity: 1;
+    -webkit-transform: translateY(40px);
     transform: translateY(40px);
   }
   100% {
     opacity: 0;
+    -webkit-transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
     transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
   }
 }
@@ -112,7 +143,14 @@ body {
   text-transform: uppercase;
   white-space: nowrap;
   opacity: .25;
+  -webkit-animation: pulse 2s linear alternate infinite;
   animation: pulse 2s linear alternate infinite;
+}
+
+@-webkit-keyframes pulse {
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes pulse {
@@ -128,6 +166,7 @@ body {
     background-color: white;
     color: black;
     border-radius: 0px;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
 }
 
@@ -135,15 +174,18 @@ body {
 .btn-default:focus,
 .btn-default:active {
     border: none;
+    -webkit-transition: 0s;
     transition: 0s;
 }
 
 .fa-angle-double-down {
     font-size: 50px;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
 }
 
 .fa-angle-double-down:hover{
+    -webkit-transition: 0.25s;
     transition: 0.25s;
     color: red;
 }
@@ -197,11 +239,13 @@ body {
 .square i {
     text-align: center;
     margin-top: 5rem;
+    -webkit-transition: 0.75s;
     transition: 0.75s;
 }
 
 .square i:hover {
     color: black;
+    -webkit-transition: 0.25s;
     transition: 0.25s
 }
 
@@ -328,6 +372,7 @@ body {
     float: right;
     width:160px;
     height:160px;
+    -webkit-transition: 0.7s;
     transition: 0.7s;
     margin-right: 20px;
 }
@@ -345,6 +390,7 @@ body {
 .timeline li:first-child .driver-img:hover {
     background: url("../images/subie.jpg") center no-repeat;
     background-size: contain;
+    -webkit-transition: 0.25s;
     transition: 0.25s;
 }
 
@@ -356,6 +402,7 @@ body {
 .timeline li:nth-child(2) .driver-img:hover {
     background: url("../images/pug.jpg") center no-repeat;
     background-size: contain;
+    -webkit-transition: 0.25s;
     transition: 0.25s;
 }
 
@@ -367,6 +414,7 @@ body {
 .timeline li:nth-child(3) .driver-img:hover {
     background: url("../images/subie2.jpg") center no-repeat;
     background-size: contain;
+    -webkit-transition: 0.25s;
     transition: 0.25s;
 }
 
@@ -378,6 +426,7 @@ body {
 .timeline li:nth-child(4) .driver-img:hover {
     background: url("../images/ds3.jpg") center no-repeat;
     background-size: contain;
+    -webkit-transition: 0.25s;
     transition: 0.25s;
 }
 
@@ -389,6 +438,7 @@ body {
 .timeline li:last-child .driver-img:hover {
     background: url("../images/vwag.jpg") center no-repeat;
     background-size: contain;
+    -webkit-transition: 0.25s;
     transition: 0.25s;
 }
 
@@ -440,6 +490,55 @@ table tr td:last-child {
         font-family: 'Roboto', sans-serif;
 }
 
+.events-whole img {
+    -webkit-transition: 1s;
+    transition: 1s
+}
+
+.events-whole img:hover {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-transition: 1s;
+    transition: 1s
+}
+
+/* section numbers */
+
+.section-numbers {
+    background: white;
+    padding: 5rem;
+}
+
+.num-content {
+    display: table;
+    font-size: 20px;
+    color: white;
+    background: rgba(0,0,0,0.8);
+    line-height: 20px;
+    height: 140px;
+    width: 140px;
+    border-radius: 100px;
+}
+
+.num-content:hover {
+    color: red;
+    -webkit-transition: 0.5s;
+    transition: 0.5s
+}
+
+.num {
+    text-align: center;
+    margin-left: 80px;
+}
+
+.num .num-content {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.num p {
+    padding-top: 10px;
+}
 
 /* helper classes */
 
