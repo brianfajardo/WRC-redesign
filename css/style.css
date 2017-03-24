@@ -39,10 +39,6 @@ body {
     background: red;
 }
 
-.wall-sticker-text:hover {
-    text-decoration: underline
-}
-
 /* Buttons */
 
 .btn-default {
@@ -407,18 +403,6 @@ table tr td:first-child {
 table tr td:last-child {
     text-align: center;
         font-family: 'Roboto', sans-serif;
-}
-
-.events-whole img {
-    -webkit-transition: 1s;
-    transition: 1s
-}
-
-.events-whole img:hover {
-    -webkit-transform: scale(0.98);
-    transform: scale(0.98);
-    -webkit-transition: 1s;
-    transition: 1s
 }
 
 /* Numbers section */
